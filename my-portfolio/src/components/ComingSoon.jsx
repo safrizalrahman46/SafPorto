@@ -7,9 +7,15 @@ export default function ComingSoon() {
       <h2 className="text-4xl font-bold mb-2">Coming Soon</h2>
       <p className="text-gray-600 mb-8">Still Learn</p>
       
-      {/* Styling kartu disesuaikan */}
-      <div className="max-w-xs mx-auto bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
-        <div className="bg-purple-300 h-48 rounded-xl flex items-center justify-center mb-6">
+      {/* PERUBAHAN 1: 
+        max-w-xs (320px) diubah menjadi max-w-sm (384px) agar kartu lebih lebar 
+      */}
+      <div className="max-w-sm mx-auto bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
+        
+        {/* PERUBAHAN 2: 
+          h-48 (192px) diubah menjadi h-56 (224px) agar gambar lebih tinggi
+        */}
+        <div className="bg-purple-300 h-56 rounded-xl flex items-center justify-center mb-6">
           <span className="text-white text-2xl font-bold">Gambar</span>
         </div>
         

@@ -18,9 +18,36 @@
 }
 
 .animate-scroll-left {
-  animation: scrollLeft 30s linear infinite;
+  animation: scrollLeft 90s linear infinite;
 }
 
 .animate-scroll-left:hover {
   animation-play-state: paused;
+}
+
+/* ... (kode tailwind Anda yang sudah ada) ... */
+
+/* ... (kode tailwind Anda di atas) ... */
+
+/* HAPUS @keyframes flyRocket LAMA ANDA */
+
+/* ... (kode tailwind Anda di atas) ... */
+
+/* TAMBAHKAN KEMBALI KODE INI JIKA ANDA MENGHAPUSNYA */
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+.animate-shake {
+  /* Bergetar terus menerus */
+  animation: shake 1s ease-in-out infinite;
 }
