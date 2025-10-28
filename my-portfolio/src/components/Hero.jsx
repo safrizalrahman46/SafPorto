@@ -1,99 +1,152 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
+import React from 'react';
 
 export default function Hero() {
   return (
-    // Menggunakan <section> tunggal yang berisi Hero dan About
-    <section className="max-w-6xl mx-auto px-4 py-12">
-      
-      {/* Bagian Hero Atas */}
-      <div className="flex items-center gap-4">
-        <h1 className="text-2xl md:text-3xl font-semibold">
-          Hi, I’m
-        </h1>
-        {/* Placeholder Foto Profil */}
-        <div className="w-16 h-16 rounded-full bg-gray-300 flex items-center justify-center text-sm text-gray-600 shadow-sm">
-          Foto
+    <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="flex flex-col items-start space-y-6">
+        {/* Header with Name (Sudah Sesuai) */}
+        <div className="flex items-center space-x-3 md:space-x-4">
+          <h1 className="text-5xl md:text-6xl font-bold">Hi, I'm</h1>
+          <div className="w-16 h-16 md:w-20 md:h-20 bg-gray-300 rounded-xl overflow-hidden shadow-sm">
+            <img 
+              src="/images/profile.png" 
+              alt="Profile" 
+              className="w-full h-full object-cover" 
+            />
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold">Rahman!</h1>
         </div>
-        <h1 className="text-2xl md:text-3xl font-semibold">
-          <span className="text-black font-bold">Rahman!</span>
-        </h1>
-      </div>
 
-      <p className="mt-2 text-lg text-gray-800">
-        I design and build intuitive, <span className="text-gray-400 font-medium">data-driven</span> experiences for the{" "}
-        <span className="text-purple-500 font-semibold">Modern Web.</span>
-      </p>
-
-      <Button className="mt-4">Let’s Make A Unique Product</Button>
-
-      {/* Experience + Book + Music Taste cards (dengan konten) */}
-      <div className="grid md:grid-cols-3 gap-6 mt-12">
-        {/* Card 1: Experience */}
-        <div className="p-4 border rounded-xl shadow-sm">
-          <h4 className="font-semibold text-sm mb-3">My Experience</h4>
-          <ul className="space-y-2">
-            <li className="flex items-center gap-2">
-              <span className="text-xs font-semibold">●</span>
-              <span className="text-xs text-gray-600">UI/UX Design Intern</span>
-            </li>
-             <li className="flex items-center gap-2">
-              <span className="text-xs font-semibold">●</span>
-              <span className="text-xs text-gray-600">Web Dev Freelance</span>
-            </li>
-             <li className="flex items-center gap-2">
-              <span className="text-xs font-semibold">●</span>
-              <span className="text-xs text-gray-600">Information Systems Student</span>
-            </li>
-          </ul>
+        {/* Description (Sudah Sesuai) */}
+        <div className="text-3xl md:text-4xl space-y-2">
+          <p>I design and build intuitive,</p>
+          <p>
+            <span className="text-gray-500">data-driven</span> experiences for
+          </p>
+          <p>
+            the <span className="text-purple-600 font-bold">Modern Web.</span>
+            <span className="ml-4 text-sm border border-gray-300 px-4 py-2 rounded-full inline-block hover:bg-gray-50 transition">
+              Let's Make A Unique Product
+            </span>
+          </p>
         </div>
-        
-        {/* Card 2: Book */}
-        <div className="p-4 border rounded-xl shadow-sm flex flex-col items-center">
-          <h4 className="font-semibold text-sm mb-3">Book That I Read</h4>
-          <div className="bg-white border-2 border-black p-2 w-36 h-44 flex flex-col justify-between shadow-lg -rotate-3">
-            <div className="text-xs font-bold">MEN ARE FROM MARS...</div>
-            <div className="text-center text-3xl">♀♂</div>
-            <div className="text-xs text-right font-bold">...Women Are From Venus</div>
+
+        {/* ================== CARDS GRID (DIPERBARUI) ================== */}
+        <div className="flex flex-wrap gap-4 mt-8 w-full">
+          
+          {/* Card 1: Experience Timeline (DIPERBARUI SESUAI GAMBAR) */}
+          <div className="bg-white rounded-2xl p-6 border border-gray-200 w-full md:w-[280px] hover:shadow-lg transition">
+            {/* Pill Tags Baru */}
+            <div className="flex flex-wrap gap-2 mb-4">
+              <span className="text-xs text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Data Analyst</span>
+              <span className="text-xs text-black border border-gray-200 px-3 py-1 rounded-full">My Experience</span>
+            </div>
+            
+            {/* Struktur Timeline (Konten Diperbarui) */}
+            <div className="relative space-y-4 pl-5">
+              <div className="absolute left-2 top-1 bottom-1 w-0.5 bg-gray-200"></div>
+              {/* Item 1 */}
+              <div className="relative">
+                <div className="absolute -left-[18px] top-1 w-4 h-4 bg-black rounded-full border-4 border-white"></div>
+                <div>
+                  <p className="text-sm font-semibold">Data Analyst</p>
+                  <p className="text-xs text-gray-500 mt-0.5">BNSP Certification</p>
+                </div>
+              </div>
+              {/* Item 2 */}
+              <div className="relative">
+                <div className="absolute -left-[18px] top-1 w-4 h-4 bg-black rounded-full border-4 border-white"></div>
+                <div>
+                  <p className="text-sm font-semibold">Freelance At TommyKreatif</p>
+                  <p className="text-xs text-gray-500 mt-0.5">Front End Dev & UI/UX</p>
+                </div>
+              </div>
+              {/* Item 3 */}
+              <div className="relative">
+                <div className="absolute -left-[18px] top-1 w-4 h-4 bg-black rounded-full border-4 border-white"></div>
+                <div>
+                  <p className="text-sm font-semibold">Intern At UBIG Data Malang</p>
+                  <p className="text-xs text-gray-500 mt-0.5">Web Scraping & Mobile Dev</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: Book Card (DIPERBARUI SESUAI GAMBAR) */}
+          <div className="bg-white rounded-2xl p-6 border border-gray-200 w-full md:w-[280px] hover:shadow-lg transition">
+            {/* Pill Tag Baru */}
+            <div className="mb-4">
+              <span className="text-xs text-black border border-gray-200 px-3 py-1 rounded-full">Book That I Read</span>
+            </div>
+            
+            {/* Konten Gambar (Ganti src ke gambar Anda) */}
+            <div className="flex justify-center items-center h-full py-4">
+              <img 
+                src="/images/book-mars-venus.png" // GANTI DENGAN PATH GAMBAR BUKU ANDA
+                alt="Book Cover"
+                className="w-3/5 object-contain" 
+              />
+            </div>
+          </div>
+
+          {/* Card 3: Music Taste Card (DIPERBARUI SESUAI GAMBAR) */}
+          <div className="bg-white rounded-2xl p-6 border border-gray-200 w-full md:w-[280px] hover:shadow-lg transition overflow-hidden">
+            {/* Pill Tag Baru */}
+            <div className="mb-4">
+              <span className="text-xs text-black border border-gray-200 px-3 py-1 rounded-full">My Music Taste</span>
+            </div>
+
+            {/* Konten Collage Album (Ganti src ke gambar Anda) */}
+            <div className="relative h-40 flex justify-center items-center">
+              {/* Album 1 (Kiri Belakang) */}
+              <img 
+                src="/images/album-1.png" // GANTI DENGAN PATH ALBUM 1
+                alt="Album 1"
+                className="w-20 h-20 object-cover rounded-lg shadow-md absolute transform -rotate-15 z-0"
+                style={{ left: '5%' }}
+              />
+              {/* Album 2 (Kiri Depan) */}
+              <img 
+                src="/images/album-2.png" // GANTI DENGAN PATH ALBUM 2
+                alt="Album 2"
+                className="w-24 h-24 object-cover rounded-lg shadow-md absolute transform -rotate-6 z-10"
+                style={{ left: '15%', top: '25%' }}
+              />
+              {/* Album 3 (Tengah) */}
+              <img 
+                src="/images/album-3-believe.png" // GANTI DENGAN PATH ALBUM 3
+                alt="Album 3 (Believe)"
+                className="w-28 h-28 object-cover rounded-lg shadow-xl absolute z-20 transform hover:scale-110 transition-transform"
+              />
+              {/* Album 4 (Kanan Depan) */}
+              <img 
+                src="/images/album-4.png" // GANTI DENGAN PATH ALBUM 4
+                alt="Album 4"
+                className="w-24 h-24 object-cover rounded-lg shadow-md absolute transform rotate-6 z-10"
+                style={{ right: '15%', top: '25%' }}
+              />
+              {/* Album 5 (Kanan Belakang) */}
+              <img 
+                src="/images/album-5.png" // GANTI DENGAN PATH ALBUM 5
+                alt="Album 5"
+                className="w-20 h-20 object-cover rounded-lg shadow-md absolute transform rotate-15 z-0"
+                style={{ right: '5%' }}
+              />
+            </div>
           </div>
         </div>
+      </div>
 
-        {/* Card 3: Music */}
-        <div className="p-4 border rounded-xl shadow-sm flex flex-col items-center">
-            <h4 className="font-semibold text-sm mb-3">My Music Taste</h4>
-            <div className="grid grid-cols-3 gap-2">
-              <div className="w-12 h-12 bg-gray-300 rounded-md shadow-sm"></div>
-              <div className="w-12 h-12 bg-gray-300 rounded-md shadow-sm"></div>
-              <div className="w-12 h-12 bg-gray-300 rounded-md shadow-sm"></div>
-              <div className="w-12 h-12 bg-gray-300 rounded-md shadow-sm"></div>
-              <div className="w-12 h-12 bg-gray-300 rounded-md shadow-sm"></div>
-              <div className="w-12 h-12 bg-gray-300 rounded-md shadow-sm"></div>
-            </div>
+      {/* Navigation Pills (Sudah Sesuai) */}
+      <div className="mt-16 flex justify-center">
+        <div className="bg-black rounded-full px-8 py-3 flex items-center space-x-6 shadow-xl">
+          <a href="#about" className="text-white text-sm hover:text-purple-400 transition">About Me</a>
+          <a href="#services" className="text-white text-sm hover:text-purple-400 transition">Services</a>
+          <a href="#projects" className="text-white text-sm hover:text-purple-400 transition">Projects</a>
+          <a href="#learning" className="text-white text-sm hover:text-purple-400 transition">Learning</a>
+          <a href="#contact" className="text-white text-sm hover:text-purple-400 transition">Let's Connect</a>
         </div>
       </div>
-
-      {/* Navigation bar (dari Hero) */}
-      <div className="mt-12 flex justify-center">
-        <div className="bg-black text-white flex rounded-full px-6 py-3 space-x-4 text-sm shadow-lg">
-          <button className="hover:text-gray-300">About Me</button>
-          <button className="hover:text-gray-300">Services</button>
-          <button className="hover:text-gray-300">Projects</button>
-          <button className="hover:text-gray-300">Learning</button>
-          <button className="font-medium hover:text-gray-300">Let’s Connect →</button>
-        </div>
-      </div>
-
-      {/* Konten dari About.jsx dipindah ke sini */}
-      <div className="text-center max-w-3xl mx-auto py-20">
-        <p className="text-lg text-gray-800">
-          I’m Safrizal Rahman, an Information Systems student passionate about web development and UI/UX design.
-        </p>
-        <p className="mt-3 text-gray-700">
-          I love creating simple, functional, and user-friendly digital experiences.
-        </p>
-        <Button variant="outline" className="mt-6">Download My CV →</Button>
-      </div>
-
     </section>
   );
-}
+};

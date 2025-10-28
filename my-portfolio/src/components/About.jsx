@@ -1,16 +1,17 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
+import React from 'react';
+import { Download } from 'lucide-react';
 
 export default function About() {
   return (
-    <section className="text-center max-w-3xl mx-auto px-4 py-20">
-      <p className="text-lg text-gray-800">
-        I’m Safrizal Rahman, an Information Systems student passionate about web development and UI/UX design.
+    <section id="about" className="py-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+      <p className="text-xl md:text-2xl leading-relaxed text-gray-800">
+        I'm Safrizal Rahman, an Information Systems student passionate about web development and UI/UX design. I love creating simple, functional, and user-friendly digital experiences.
       </p>
-      <p className="mt-3 text-gray-700">
-        I love creating simple, functional, and user-friendly digital experiences.
-      </p>
-      <Button variant="outline" className="mt-6">Download My CV →</Button>
+      {/* Tombol Download CV disesuaikan */}
+      <button className="mt-8 px-8 py-3 border-2 border-gray-300 rounded-full hover:bg-gray-50 transition flex items-center space-x-2 mx-auto group">
+        <span>Download My CV</span>
+        <Download className="w-4 h-4 group-hover:animate-bounce" />
+      </button>
     </section>
   );
-}
+};

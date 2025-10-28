@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  
+  /* PERUBAHAN DI SINI:
+    Ubah dari -100% menjadi -50%.
+    Ini akan menggeser <div> sejauh 1 set logo (bukan 2 set),
+    sehingga menciptakan loop yang mulus tanpa ruang kosong.
+  */
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scrollLeft 30s linear infinite;
+}
+
+.animate-scroll-left:hover {
+  animation-play-state: paused;
+}

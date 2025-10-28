@@ -1,28 +1,58 @@
-import React from "react";
-
-// Memperbarui data agar memiliki tags yang dinamis
-const projects = [
-  { title: "Judul Project 1", desc: "Keterangan Singkat", tags: ["Teknologi", "Teknologi", "Teknologi"] },
-  { title: "Judul Project 2", desc: "Keterangan Singkat", tags: ["Teknologi", "Teknologi", "Teknologi"] },
-  { title: "Judul Project 3", desc: "Keterangan Singkat", tags: ["Teknologi", "Teknologi", "Teknologi"] },
-  { title: "Judul Project 4", desc: "Keterangan Singkat", tags: ["Teknologi", "Teknologi", "Teknologi"] },
-];
+import React from 'react';
 
 export default function Projects() {
+  const projects = [
+    { 
+      title: 'Judul Project', 
+      category: 'Keterangan Singkat', 
+      tags: ['Teknologi', 'Teknologi', 'Teknologi'],
+      color: 'bg-purple-300' // Sesuai gambar
+    },
+    { 
+      title: 'Judul Project', 
+      category: 'Keterangan Singkat', 
+      tags: ['Teknologi', 'Teknologi', 'Teknologi'],
+      color: 'bg-purple-300'
+    },
+    { 
+      title: 'Judul Project', 
+      category: 'Keterangan Singkat', 
+      tags: ['Teknologi', 'Teknologi', 'Teknologi'],
+      color: 'bg-purple-300'
+    },
+    { 
+      title: 'Judul Project', 
+      category: 'Keterangan Singkat', 
+      tags: ['Teknologi', 'Teknologi', 'Teknologi'],
+      color: 'bg-purple-300'
+    },
+  ];
+
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12">
-      <div className="grid md:grid-cols-2 gap-8">
-        {projects.map((p, i) => (
-          <div key={i} className="border rounded-xl overflow-hidden shadow-sm">
-            {/* Mengganti warna placeholder agar sesuai desain (abu-abu) */}
-            <div className="bg-gray-200 h-48 flex items-center justify-center font-semibold text-gray-500">GAMBAR</div>
-            <div className="p-4">
-              <h3 className="font-semibold text-sm">{p.title}</h3>
-              <p className="text-xs text-gray-500">{p.desc}</p>
-              {/* Me-render tags secara dinamis dari data */}
-              <div className="flex gap-2 mt-2 flex-wrap">
-                {p.tags.map((tag, j) => (
-                  <span key={j} className="text-xs border px-2 py-0.5 rounded-full">{tag}</span>
+    <section id="projects" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {projects.map((project, index) => (
+          <div 
+            key={index} 
+            // Styling kartu disesuaikan
+            className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            {/* Placeholder 'GAMBAR' dengan warna ungu */}
+            <div className={`${project.color} h-64 flex items-center justify-center`}>
+              <span className="text-white text-4xl font-bold">GAMBAR</span>
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-1">{project.title}</h3>
+              <p className="text-sm text-gray-600 mb-4">{project.category}</p>
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map((tag, i) => (
+                  // Styling tag disesuaikan
+                  <span 
+                    key={i} 
+                    className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full hover:bg-purple-100 transition"
+                  >
+                    {tag}
+                  </span>
                 ))}
               </div>
             </div>
@@ -31,4 +61,4 @@ export default function Projects() {
       </div>
     </section>
   );
-}
+};

@@ -1,21 +1,38 @@
-import React from "react";
-import { SiLaravel, SiHtml5, SiCss3, SiReact, SiFigma } from "react-icons/si";
+import React from 'react';
 
 export default function TechStack() {
-  const icons = [SiLaravel, SiHtml5, SiCss3, SiReact, SiFigma];
-  // const names = ["Laravel", "HTML", "CSS", "React", "Figma"]; // Dihapus
+  const techs = [
+    { name: 'Laravel', src: '/tech/laravel-logo.png' },
+    { name: 'HTML5', src: '/tech/html5-logo.png' },
+    { name: 'CSS3', src: '/tech/css3-logo.png' },
+    { name: 'React', src: '/tech/react-logo.png' },
+    { name: 'Figma', src: '/tech/figma-logo.png' },
+  ];
+
+  // Duplikasi array tetap diperlukan
+  const duplicatedTechs = [...techs, ...techs];
 
   return (
-    <section className="py-16">
-      <div className="flex justify-center items-center gap-10 md:gap-16 flex-wrap">
-        {icons.map((Icon, i) => (
-          <div key={i} className="flex flex-col items-center">
-            <Icon size={60} className="text-gray-600" />
-            {/* Teks nama dihapus agar sesuai desain */}
-            {/* <p className="text-sm mt-2">{names[i]}</p> */}
-          </div>
+    <section className="py-16 overflow-hidden">
+      
+      {/* PERUBAHAN 1:
+        'gap-16 md:gap-24' DIHAPUS dari div ini.
+      */}
+      <div className="flex whitespace-nowrap animate-scroll-left">
+        {duplicatedTechs.map((tech, index) => (
+          <img 
+            key={index}
+            src={tech.src} 
+            alt={tech.name} 
+            /* PERUBAHAN 2:
+              Tambahkan margin kanan (mr-16 md:mr-24) untuk menggantikan gap.
+              Ini memastikan setiap item (termasuk yang terakhir) memiliki
+              jarak yang sama, membuat loop-nya sempurna.
+            */
+            className="h-24 md:h-32 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex-none mr-16 md:mr-24" 
+          />
         ))}
       </div>
     </section>
   );
-}
+};
