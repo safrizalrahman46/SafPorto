@@ -5,6 +5,7 @@ import About from './components/About'; // Dihidupkan kembali
 import Projects from './components/Projects';
 import TechStack from './components/TechStack';
 import ComingSoon from './components/ComingSoon';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 // Import ikon untuk Sidebar
@@ -20,6 +21,7 @@ function App() {
       <Projects />
       <TechStack />
       <ComingSoon />
+      <Contact />
       <Footer />
       
       {/* === INI ADALAH SIDEBAR SOSIAL MEDIA YANG DITAMBAHKAN === */}

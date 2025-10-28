@@ -4,7 +4,7 @@ import { Mail, MessageSquare } from 'lucide-react'; // Import ikon
 export default function Contact() {
   return (
     // Section dengan ID "contact" agar link di Navbar/Hero berfungsi
-    <section id="contact" className="py-24 bg-gray-50">
+    <section id="contact" className="py-24 bg-white-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Judul */}
