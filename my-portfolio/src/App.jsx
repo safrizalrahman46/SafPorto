@@ -40,8 +40,7 @@ function App() {
         <a 
           href="#" 
           className="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-purple-100 hover:scale-110 transition shadow-lg"
-        >
-          <Instagram className="w-5 h-5" />
+        > <Instagram className="w-5 h-5" />
         </a>
         <a 
           href="#" 
