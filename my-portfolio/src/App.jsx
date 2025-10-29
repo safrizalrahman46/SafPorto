@@ -8,8 +8,9 @@ import ComingSoon from './components/ComingSoon';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Preloader from './components/Preloader';
+import Certification from './components/Certification';
 
-import { Mail, Linkedin, Instagram, MessageSquare } from 'lucide-react';
+import { Mail, Linkedin, Instagram, MessageSquare, Dribbble, Github } from 'lucide-react';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,6 +48,7 @@ function App() {
       <TechStack />
       <ComingSoon />
       <Contact />
+      <Certification />
       <Footer />
       
       {/* Sidebar Sosial Media */}
@@ -55,13 +57,13 @@ function App() {
           href="#" 
           className="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-purple-100 hover:scale-110 transition shadow-lg"
         >
-          <Mail className="w-5 h-5" />
+          <Dribbble className="w-5 h-5" />
         </a>
         <a 
           href="#" 
           className="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-purple-100 hover:scale-110 transition shadow-lg"
         >
-          <MessageSquare className="w-5 h-5" />
+          <Github className="w-5 h-5" />
         </a>
         <a 
           href="#" 

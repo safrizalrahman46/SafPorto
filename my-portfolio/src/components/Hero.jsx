@@ -73,7 +73,7 @@ export default function Hero() {
           </div>
 
           {/* Card 2: Book Card (DIPERBARUI SESUAI GAMBAR) */}
-          <div className="bg-white rounded-2xl p-6 border border-gray-200 w-full md:w-[280px] hover:shadow-lg transition">
+          <div className="bg-white rounded-2xl p-6 border border-gray-200 w-full md:w-[580px] hover:shadow-lg transition">
             {/* Pill Tag Baru */}
             <div className="mb-4">
               <span className="text-xs text-black border border-gray-200 px-3 py-1 rounded-full">Book That I Read</span>
@@ -141,7 +141,7 @@ export default function Hero() {
       <div className="mt-16 flex justify-center">
         <div className="bg-black rounded-full px-8 py-3 flex items-center space-x-6 shadow-xl">
           <a href="#about" className="text-white text-sm hover:text-purple-400 transition">About Me</a>
-          <a href="#services" className="text-white text-sm hover:text-purple-400 transition">Services</a>
+          <a href="#certification" className="text-white text-sm hover:text-purple-400 transition">Certification</a>
           <a href="#projects" className="text-white text-sm hover:text-purple-400 transition">Projects</a>
           <a href="#learning" className="text-white text-sm hover:text-purple-400 transition">Learning</a>
           <a href="#contact" className="text-white text-sm hover:text-purple-400 transition">Let's Connect</a>
