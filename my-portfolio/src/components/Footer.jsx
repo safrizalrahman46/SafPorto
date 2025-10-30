@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-200 mt-16">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-        <p className="text-gray-600 text-sm">© 2024 Safrizal Rahman. All rights reserved.</p>
+        <p className="text-gray-600 text-sm">© 2025 Safrizal Rahman. All rights reserved.</p>
         {/* Ikon sosial media di footer */}
         <div className="flex space-x-4 mt-4 md:mt-0">
           <a 

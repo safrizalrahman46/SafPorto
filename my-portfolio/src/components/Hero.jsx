@@ -1,6 +1,7 @@
 import React from "react";
 // ⚠️ Hapus import Spotify karena tidak tersedia di lucide-react
 // import { Spotify } from "lucide-react";
+// import React, { useState, useEffect } from "react";
 
 export default function Hero() {
   return (
@@ -93,18 +94,31 @@ export default function Hero() {
               </span>
             </div>
 
-            <div className="flex justify-center items-center h-full py-4">
+            <div className="grid grid-cols-3 gap-4 justify-items-center items-center">
               <img
-                src="/images/book-mars-venus.png"
-                alt="Book Cover"
-                className="w-3/5 object-contain"
+                src="https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_UF1000,1000_QL80_.jpg"
+                alt="Atomic Habits"
+                className="w-28 h-40 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
+              />
+              <img
+                src="https://m.media-amazon.com/images/I/71aG+xDKSYL.jpg"
+                alt="The Subtle Art of Not Giving a F*ck"
+                className="w-28 h-40 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
+              />
+              <img
+                src="https://m.media-amazon.com/images/I/81RfW9mFkEL.jpg"
+                alt="Deep Work"
+                className="w-28 h-40 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
               />
             </div>
+
+            <p className="text-center text-xs text-gray-500 mt-4">
+              Books that inspire my mindset and creativity
+            </p>
           </div>
 
           {/* Card 3: My Music Taste */}
           <div className="bg-white rounded-2xl p-6 border border-gray-200 w-full md:w-[280px] hover:shadow-lg transition overflow-hidden">
-            {/* Header */}
             <div className="mb-4 flex items-center justify-between">
               <span className="text-xs text-black border border-gray-200 px-3 py-1 rounded-full">
                 My Music Taste
