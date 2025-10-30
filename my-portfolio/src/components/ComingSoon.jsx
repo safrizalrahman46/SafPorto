@@ -57,13 +57,13 @@ export default function ComingSoon() {
           {/* Tombol navigasi kiri-kanan */}
           <button
             onClick={prevSlide}
-            className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-700 rounded-full p-2 shadow"
+            className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-700 rounded-full w-9 h-9 flex items-center justify-center shadow"
           >
             ‹
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-700 rounded-full p-2 shadow"
+            className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-gray-700 rounded-full w-9 h-9 flex items-center justify-center shadow"
           >
             ›
           </button>
