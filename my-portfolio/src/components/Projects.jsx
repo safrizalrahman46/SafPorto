@@ -10,18 +10,60 @@ export default function Projects() {
       src: '/images/dashboard.png'
     },
     { 
-      title: 'E-Commerce UI', 
+      title: 'POS Tab', 
       category: 'Desain antarmuka toko online modern dan responsif', 
       tags: ['Next.js', 'Framer Motion', 'TypeScript'],
       color: 'bg-white-300',
-      src: '/images/ecommerce.png'
+      src: '/images/PosTab.png'
     },
     { 
-      title: 'Expense Tracker App', 
+      title: 'Product Page', 
       category: 'Aplikasi untuk mencatat dan memantau pengeluaran harian', 
       tags: ['Flutter', 'Firebase', 'Bloc'],
       color: 'bg-white-300',
-      src: '/images/expense.png'
+      src: '/images/LandingProduct.png'
+    },
+       { 
+      title: 'LootKita', 
+      category: 'Website pribadi untuk menampilkan karya dan pengalaman', 
+      tags: ['React', 'TailwindCSS', 'Vite'],
+      color: 'bg-white-300',
+      src: '/images/LootkitaProjects.png'
+    },
+    { 
+      title: 'Mintra', 
+      category: 'Desain antarmuka toko online modern dan responsif', 
+      tags: ['Next.js', 'Framer Motion', 'TypeScript'],
+      color: 'bg-white-300',
+      src: '/images/Mintra.png'
+    },
+    { 
+      title: 'PBL Toeic Registration', 
+      category: 'Aplikasi untuk mencatat dan memantau pengeluaran harian', 
+      tags: ['Flutter', 'Firebase', 'Bloc'],
+      color: 'bg-white-300',
+      src: '/images/PBLToeic.png'
+    },
+       { 
+      title: 'ZonaPrivat', 
+      category: 'Website pribadi untuk menampilkan karya dan pengalaman', 
+      tags: ['React', 'TailwindCSS', 'Vite'],
+      color: 'bg-white-300',
+      src: '/images/ZonaPrivat.png'
+    },
+    { 
+      title: 'TicaTacToe Game', 
+      category: 'Desain antarmuka toko online modern dan responsif', 
+      tags: ['Next.js', 'Framer Motion', 'TypeScript'],
+      color: 'bg-white-300',
+      src: '/images/TicTacToe.png'
+    },
+    { 
+      title: 'Product Page', 
+      category: 'Aplikasi untuk mencatat dan memantau pengeluaran harian', 
+      tags: ['Flutter', 'Firebase', 'Bloc'],
+      color: 'bg-white-300',
+      src: '/images/DinoJump.png'
     },
   ];
 

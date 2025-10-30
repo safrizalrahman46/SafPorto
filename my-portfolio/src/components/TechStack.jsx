@@ -7,6 +7,9 @@ export default function TechStack() {
     { name: 'CSS3', src: '/tech/css3-logo.png' },
     { name: 'React', src: '/tech/react-logo.png' },
     { name: 'Figma', src: '/tech/figma-logo.png' },
+    { name: 'Javascript', src: '/tech/javascript.png' },
+    { name: 'Javascript', src: '/tech/colab.png' },
+    { name: 'Javascript', src: '/tech/python.png' },
   ];
 
   // Duplikasi array tetap diperlukan
