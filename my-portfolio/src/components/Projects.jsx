@@ -2,87 +2,113 @@ import React from "react";
 
 export default function Projects() {
   const projects = [
-    { 
-      title: 'Dashboard Admin', 
-      category: 'Website pribadi untuk menampilkan karya dan pengalaman', 
-      tags: ['React', 'TailwindCSS', 'Vite'],
-      color: 'bg-white-300',
-      src: '/images/dashboard.png'
+    {
+      title: "Dashboard Admin",
+      category: "Website pribadi untuk menampilkan karya dan pengalaman",
+      tags: ["React", "TailwindCSS", "Vite"],
+      color: "bg-white-300",
+      src: "/images/dashboard.png",
     },
-    { 
-      title: 'POS Tab', 
-      category: 'Desain antarmuka toko online modern dan responsif', 
-      tags: ['Next.js', 'Framer Motion', 'TypeScript'],
-      color: 'bg-white-300',
-      src: '/images/PosTab.png'
+    {
+      title: "POS Tab",
+      category: "Desain antarmuka toko online modern dan responsif",
+      tags: ["Next.js", "Framer Motion", "TypeScript"],
+      color: "bg-white-300",
+      src: "/images/PosTab.png",
     },
-    { 
-      title: 'Product Page', 
-      category: 'Aplikasi untuk mencatat dan memantau pengeluaran harian', 
-      tags: ['Flutter', 'Firebase', 'Bloc'],
-      color: 'bg-white-300',
-      src: '/images/LandingProduct.png'
+    {
+      title: "Product Page",
+      category: "Aplikasi untuk mencatat dan memantau pengeluaran harian",
+      tags: ["Flutter", "Firebase", "Bloc"],
+      color: "bg-white-300",
+      src: "/images/LandingProduct.png",
     },
-       { 
-      title: 'LootKita', 
-      category: 'Website pribadi untuk menampilkan karya dan pengalaman', 
-      tags: ['React', 'TailwindCSS', 'Vite'],
-      color: 'bg-white-300',
-      src: '/images/LootkitaProjects.png'
+    {
+      title: "LootKita",
+      category: "Website pribadi untuk menampilkan karya dan pengalaman",
+      tags: ["React", "TailwindCSS", "Vite"],
+      color: "bg-white-300",
+      src: "/images/LootkitaProjects.png",
     },
-    { 
-      title: 'Mintra', 
-      category: 'Desain antarmuka toko online modern dan responsif', 
-      tags: ['Next.js', 'Framer Motion', 'TypeScript'],
-      color: 'bg-white-300',
-      src: '/images/Mintra.png'
+    {
+      title: "Mintra",
+      category: "Desain antarmuka toko online modern dan responsif",
+      tags: ["Next.js", "Framer Motion", "TypeScript"],
+      color: "bg-white-300",
+      src: "/images/Mintra.png",
     },
-    { 
-      title: 'PBL Toeic Registration', 
-      category: 'Aplikasi untuk mencatat dan memantau pengeluaran harian', 
-      tags: ['Flutter', 'Firebase', 'Bloc'],
-      color: 'bg-white-300',
-      src: '/images/PBLToeic.png'
+    {
+      title: "PBL Toeic Registration",
+      category: "Aplikasi untuk mencatat dan memantau pengeluaran harian",
+      tags: ["Flutter", "Firebase", "Bloc"],
+      color: "bg-white-300",
+      src: "/images/PBLToeic.png",
     },
-       { 
-      title: 'ZonaPrivat', 
-      category: 'Website pribadi untuk menampilkan karya dan pengalaman', 
-      tags: ['React', 'TailwindCSS', 'Vite'],
-      color: 'bg-white-300',
-      src: '/images/ZonaPrivat.png'
+    {
+      title: "ZonaPrivat",
+      category: "Website pribadi untuk menampilkan karya dan pengalaman",
+      tags: ["React", "TailwindCSS", "Vite"],
+      color: "bg-white-300",
+      src: "/images/ZonaPrivat.png",
     },
-    { 
-      title: 'TicaTacToe Game', 
-      category: 'Desain antarmuka toko online modern dan responsif', 
-      tags: ['Next.js', 'Framer Motion', 'TypeScript'],
-      color: 'bg-white-300',
-      src: '/images/TicTacToe.png'
+    {
+      title: "TicaTacToe Game",
+      category: "Desain antarmuka toko online modern dan responsif",
+      tags: ["Next.js", "Framer Motion", "TypeScript"],
+      color: "bg-white-300",
+      src: "/images/TicTacToe.png",
     },
-    { 
-      title: 'Product Page', 
-      category: 'Aplikasi untuk mencatat dan memantau pengeluaran harian', 
-      tags: ['Flutter', 'Firebase', 'Bloc'],
-      color: 'bg-white-300',
-      src: '/images/DinoJump.png'
+    {
+      title: "Product Page",
+      category: "Aplikasi untuk mencatat dan memantau pengeluaran harian",
+      tags: ["Flutter", "Firebase", "Bloc"],
+      color: "bg-white-300",
+      src: "/images/DinoJump.png",
+    },
+    {
+      title: "UMM Design Admin Page",
+      category: "Aplikasi untuk mencatat dan memantau pengeluaran harian",
+      tags: ["Flutter", "Firebase", "Bloc"],
+      color: "bg-white-300",
+      src: "/images/UMMDesign.png",
+    },
+     {
+      title: "Hand Recognition With Python",
+      category: "Aplikasi untuk mencatat dan memantau pengeluaran harian",
+      tags: ["Flutter", "Firebase", "Bloc"],
+      color: "bg-white-300",
+      src: "/images/HandRecognition.png",
+    },
+     {
+      title: "JTI Lapor",
+      category: "Aplikasi untuk mencatat dan memantau pengeluaran harian",
+      tags: ["Flutter", "Firebase", "Bloc"],
+      color: "bg-white-300",
+      src: "/images/JTILapor.png",
     },
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section
+      id="projects"
+      className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+    >
       <h2 className="text-3xl font-bold text-center mb-12">My Projects</h2>
 
       {/* Grid Projects */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
             {/* Gambar */}
-            <div className={`${project.color} h-56 flex items-center justify-center`}>
-              <img 
-                src={project.src} 
-                alt={project.title} 
+            <div
+              className={`${project.color} h-56 flex items-center justify-center`}
+            >
+              <img
+                src={project.src}
+                alt={project.title}
                 className="h-full w-full object-cover"
               />
             </div>
@@ -95,8 +121,8 @@ export default function Projects() {
               {/* Tags */}
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, i) => (
-                  <span 
-                    key={i} 
+                  <span
+                    key={i}
                     className="text-xs text-purple-700 bg-purple-100 border border-purple-200 px-3 py-1 rounded-full hover:bg-purple-200 hover:translate-y-[-2px] transition-all duration-200"
                   >
                     {tag}

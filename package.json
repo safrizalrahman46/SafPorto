@@ -5,6 +5,8 @@
     "tailwindcss": "^4.1.16"
   },
   "dependencies": {
+    "lucide-react": "^0.548.0",
+    "react-loading-indicators": "^1.0.1",
     "react-router-dom": "^7.9.4"
   }
 }

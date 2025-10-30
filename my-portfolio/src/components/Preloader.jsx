@@ -1,31 +1,36 @@
-import React from 'react';
+import React from "react";
+import { OrbitProgress } from "react-loading-indicators";
 
-// Komponen ini menerima prop 'isFading'
 export default function Preloader({ isFading }) {
   return (
-    <div 
+    <div
       className={`
-        fixed inset-0 flex items-center justify-center z-[999]
+        fixed inset-0 flex flex-col items-center justify-center z-[999]
         bg-white 
-        
-        /* === INI ADALAH ANIMASI SWIPE UP UNTUK BACKGROUND === */
         transition-transform duration-1000 ease-in-out
         ${isFading ? '-translate-y-full' : 'translate-y-0'}
         ${isFading ? 'pointer-events-none' : 'pointer-events-auto'}
       `}
     >
-      {/* INI ADALAH ANIMASI GETAR UNTUK IKON.
-        Ikon ini akan ikut "swipe" ke atas karena dia berada 
-        di dalam div di atasnya.
-      */}
-      <div className="animate-shake">
-        
-        {/* Logo "R" Anda */}
-        <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center border-4 border-gray-200">
-          <span className="text-black text-5xl font-bold">R</span>
-        </div>
+      {/* CD Image + Rotation */}
+      <div className="relative flex flex-col items-center justify-center">
+        {/* Gambar CD hitam putih yang berputar */}
+        <img
+          src="/images/JBCD.png"
+          alt="CD Loader"
+          className="w-28 h-28 animate-spin-slow mb-6 filter grayscale"
+        />
 
+        {/* Loading indicator di bawah CD */}
+        <OrbitProgress 
+          color="#000" 
+          size="medium" 
+          text="" 
+        />
       </div>
+
+      {/* Optional: Tambahkan teks */}
+      <p className="text-sm text-gray-600 mt-4 tracking-wide">is it too late now to say sorry...</p>
     </div>
   );
 }

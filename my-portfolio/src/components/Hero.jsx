@@ -1,24 +1,25 @@
-import React from 'react';
+import React from "react";
+// ⚠️ Hapus import Spotify karena tidak tersedia di lucide-react
 // import { Spotify } from "lucide-react";
 
 export default function Hero() {
   return (
     <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="flex flex-col items-start space-y-6">
-        {/* Header with Name (Sudah Sesuai) */}
+        {/* Header with Name */}
         <div className="flex items-center space-x-3 md:space-x-4">
           <h1 className="text-5xl md:text-6xl font-bold">Hi, I'm</h1>
           <div className="w-16 h-16 md:w-20 md:h-20 bg-gray-300 rounded-xl overflow-hidden shadow-sm">
-            <img 
-              src="/images/profile.png" 
-              alt="Profile" 
-              className="w-full h-full object-cover" 
+            <img
+              src="/images/profile.png"
+              alt="Profile"
+              className="w-full h-full object-cover"
             />
           </div>
           <h1 className="text-5xl md:text-6xl font-bold">Rahman!</h1>
         </div>
 
-        {/* Description (Sudah Sesuai) */}
+        {/* Description */}
         <div className="text-3xl md:text-4xl space-y-2">
           <p>I design and build intuitive,</p>
           <p>
@@ -32,122 +33,188 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* ================== CARDS GRID (DIPERBARUI) ================== */}
+        {/* ================== CARDS GRID ================== */}
         <div className="flex flex-wrap gap-4 mt-8 w-full">
-          
-          {/* Card 1: Experience Timeline (DIPERBARUI SESUAI GAMBAR) */}
+          {/* Card 1: Experience */}
           <div className="bg-white rounded-2xl p-6 border border-gray-200 w-full md:w-[280px] hover:shadow-lg transition">
-            {/* Pill Tags Baru */}
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="text-xs text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Data Analyst</span>
-              <span className="text-xs text-black border border-gray-200 px-3 py-1 rounded-full">My Experience</span>
+              <span className="text-xs text-gray-700 border border-gray-200 px-3 py-1 rounded-full">
+                Data Analyst
+              </span>
+              <span className="text-xs text-black border border-gray-200 px-3 py-1 rounded-full">
+                My Experience
+              </span>
             </div>
-            
-            {/* Struktur Timeline (Konten Diperbarui) */}
+
             <div className="relative space-y-4 pl-5">
               <div className="absolute left-2 top-1 bottom-1 w-0.5 bg-gray-200"></div>
-              {/* Item 1 */}
+
               <div className="relative">
                 <div className="absolute -left-[18px] top-1 w-4 h-4 bg-black rounded-full border-4 border-white"></div>
                 <div>
                   <p className="text-sm font-semibold">Data Analyst</p>
-                  <p className="text-xs text-gray-500 mt-0.5">BNSP Certification</p>
+                  <p className="text-xs text-gray-500 mt-0.5">
+                    BNSP Certification
+                  </p>
                 </div>
               </div>
-              {/* Item 2 */}
+
               <div className="relative">
                 <div className="absolute -left-[18px] top-1 w-4 h-4 bg-black rounded-full border-4 border-white"></div>
                 <div>
-                  <p className="text-sm font-semibold">Freelance At TommyKreatif</p>
-                  <p className="text-xs text-gray-500 mt-0.5">Front End Dev & UI/UX</p>
+                  <p className="text-sm font-semibold">
+                    Freelance At TommyKreatif
+                  </p>
+                  <p className="text-xs text-gray-500 mt-0.5">
+                    Front End Dev & UI/UX
+                  </p>
                 </div>
               </div>
-              {/* Item 3 */}
+
               <div className="relative">
                 <div className="absolute -left-[18px] top-1 w-4 h-4 bg-black rounded-full border-4 border-white"></div>
                 <div>
-                  <p className="text-sm font-semibold">Intern At UBIG Data Malang</p>
-                  <p className="text-xs text-gray-500 mt-0.5">Web Scraping & Mobile Dev</p>
+                  <p className="text-sm font-semibold">
+                    Intern At UBIG Data Malang
+                  </p>
+                  <p className="text-xs text-gray-500 mt-0.5">
+                    Web Scraping & Mobile Dev
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Card 2: Book Card (DIPERBARUI SESUAI GAMBAR) */}
+          {/* Card 2: Book */}
           <div className="bg-white rounded-2xl p-6 border border-gray-200 w-full md:w-[580px] hover:shadow-lg transition">
-            {/* Pill Tag Baru */}
             <div className="mb-4">
-              <span className="text-xs text-black border border-gray-200 px-3 py-1 rounded-full">Book That I Read</span>
+              <span className="text-xs text-black border border-gray-200 px-3 py-1 rounded-full">
+                Book That I Read
+              </span>
             </div>
-            
-            {/* Konten Gambar (Ganti src ke gambar Anda) */}
+
             <div className="flex justify-center items-center h-full py-4">
-              <img 
-                src="/images/book-mars-venus.png" // GANTI DENGAN PATH GAMBAR BUKU ANDA
+              <img
+                src="/images/book-mars-venus.png"
                 alt="Book Cover"
-                className="w-3/5 object-contain" 
+                className="w-3/5 object-contain"
               />
             </div>
           </div>
 
-          {/* Card 3: Music Taste Card (DIPERBARUI SESUAI GAMBAR) */}
+          {/* Card 3: My Music Taste */}
           <div className="bg-white rounded-2xl p-6 border border-gray-200 w-full md:w-[280px] hover:shadow-lg transition overflow-hidden">
-            {/* Pill Tag Baru */}
-            <div className="mb-4">
-              <span className="text-xs text-black border border-gray-200 px-3 py-1 rounded-full">My Music Taste</span>
+            {/* Header */}
+            <div className="mb-4 flex items-center justify-between">
+              <span className="text-xs text-black border border-gray-200 px-3 py-1 rounded-full">
+                My Music Taste
+              </span>
+
+              {/* Tombol Spotify pakai SVG asli */}
+              <a
+                href="https://open.spotify.com/playlist/yourplaylistid"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 hover:bg-green-50 rounded-full transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 496 512"
+                  className="w-5 h-5 fill-green-500"
+                >
+                  <path d="M248 8C111 8 0 119 0 256s111 248 
+                  248 248 248-111 248-248S385 8 248 
+                  8zm100.7 365.3c-4.2 6.8-13.2 8.9-20 
+                  4.7-54.7-33.4-123.6-41-204.7-22.7-7.8 
+                  1.7-15.6-3.3-17.3-11.1-1.7-7.8 3.3-15.6 
+                  11.1-17.3 88.9-19.8 165.1-10.7 
+                  227.3 26.7 6.8 4.2 8.9 13.2 4.7 
+                  20zM376.6 312c-5.2 8.4-16.3 11-24.7 
+                  5.9-62.7-38.5-158.4-49.7-231.9-27.4-9.4 
+                  2.9-19.3-2.3-22.2-11.7-2.9-9.4 
+                  2.3-19.3 11.7-22.2 82.9-25.5 187.9-13.3 
+                  258.1 31.1 8.3 5.1 10.8 16.2 
+                  5.9 24.3zm2.7-65.5c-74.6-44.3-197.6-48.4-268.3-26.7-11.2 
+                  3.4-23.2-2.9-26.6-14.1-3.4-11.2 
+                  2.9-23.2 14.1-26.6 80.4-24.4 
+                  213.8-19.8 298.4 30.2 10.1 6 
+                  13.4 19 7.4 29.1-6 10.1-19 
+                  13.4-29.1 7.4z" />
+                </svg>
+              </a>
             </div>
 
-            {/* Konten Collage Album (Ganti src ke gambar Anda) */}
+            {/* Collage Album */}
             <div className="relative h-40 flex justify-center items-center">
-              {/* Album 1 (Kiri Belakang) */}
-              <img 
-                src="/images/album-1.png" // GANTI DENGAN PATH ALBUM 1
+              <img
+                src="/images/album-1.png"
                 alt="Album 1"
-                className="w-20 h-20 object-cover rounded-lg shadow-md absolute transform -rotate-15 z-0"
-                style={{ left: '5%' }}
+                className="w-20 h-20 object-cover rounded-lg shadow-md absolute transform -rotate-[15deg] z-0"
+                style={{ left: "5%" }}
               />
-              {/* Album 2 (Kiri Depan) */}
-              <img 
-                src="/images/album-2.png" // GANTI DENGAN PATH ALBUM 2
+              <img
+                src="/images/album-2.png"
                 alt="Album 2"
-                className="w-24 h-24 object-cover rounded-lg shadow-md absolute transform -rotate-6 z-10"
-                style={{ left: '15%', top: '25%' }}
+                className="w-24 h-24 object-cover rounded-lg shadow-md absolute transform -rotate-[6deg] z-10"
+                style={{ left: "15%", top: "25%" }}
               />
-              {/* Album 3 (Tengah) */}
-              <img 
-                src="/images/album-3-believe.png" // GANTI DENGAN PATH ALBUM 3
+              <img
+                src="/images/album-3-believe.png"
                 alt="Album 3 (Believe)"
                 className="w-28 h-28 object-cover rounded-lg shadow-xl absolute z-20 transform hover:scale-110 transition-transform"
               />
-              {/* Album 4 (Kanan Depan) */}
-              <img 
-                src="/images/album-4.png" // GANTI DENGAN PATH ALBUM 4
+              <img
+                src="/images/album-4.png"
                 alt="Album 4"
-                className="w-24 h-24 object-cover rounded-lg shadow-md absolute transform rotate-6 z-10"
-                style={{ right: '15%', top: '25%' }}
+                className="w-24 h-24 object-cover rounded-lg shadow-md absolute transform rotate-[6deg] z-10"
+                style={{ right: "15%", top: "25%" }}
               />
-              {/* Album 5 (Kanan Belakang) */}
-              <img 
-                src="/images/album-5.png" // GANTI DENGAN PATH ALBUM 5
+              <img
+                src="/images/album-5.png"
                 alt="Album 5"
-                className="w-20 h-20 object-cover rounded-lg shadow-md absolute transform rotate-15 z-0"
-                style={{ right: '5%' }}
+                className="w-20 h-20 object-cover rounded-lg shadow-md absolute transform rotate-[15deg] z-0"
+                style={{ right: "5%" }}
               />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Navigation Pills (Sudah Sesuai) */}
+      {/* Navigation Pills */}
       <div className="mt-16 flex justify-center">
         <div className="bg-black rounded-full px-8 py-3 flex items-center space-x-6 shadow-xl">
-          <a href="#about" className="text-white text-sm hover:text-purple-400 transition">About Me</a>
-          <a href="#certification" className="text-white text-sm hover:text-purple-400 transition">Certification</a>
-          <a href="#projects" className="text-white text-sm hover:text-purple-400 transition">Projects</a>
-          <a href="#learning" className="text-white text-sm hover:text-purple-400 transition">Learning</a>
-          <a href="#contact" className="text-white text-sm hover:text-purple-400 transition">Let's Connect</a>
+          <a
+            href="#about"
+            className="text-white text-sm hover:text-purple-400 transition"
+          >
+            About Me
+          </a>
+          <a
+            href="#certification"
+            className="text-white text-sm hover:text-purple-400 transition"
+          >
+            Certification
+          </a>
+          <a
+            href="#projects"
+            className="text-white text-sm hover:text-purple-400 transition"
+          >
+            Projects
+          </a>
+          <a
+            href="#learning"
+            className="text-white text-sm hover:text-purple-400 transition"
+          >
+            Learning
+          </a>
+          <a
+            href="#contact"
+            className="text-white text-sm hover:text-purple-400 transition"
+          >
+            Let's Connect
+          </a>
         </div>
       </div>
     </section>
   );
-};
+}
