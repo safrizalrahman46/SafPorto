@@ -216,7 +216,7 @@ export default function Hero() {
             Projects
           </a>
           <a
-            href="#learning"
+            href="#Learning"
             className="text-white text-sm hover:text-purple-400 transition"
           >
             Learning

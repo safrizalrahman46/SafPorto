@@ -72,7 +72,7 @@ export default function Certification() {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+    <section id="certification" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
       {/* Header dengan animasi fade in dari atas */}
       <div className="text-center mb-12 animate-fadeInDown">
   <h2 className="text-5xl font-extrabold mb-3 text-black">

@@ -31,7 +31,7 @@ export default function ComingSoon() {
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+    <section id="Learning" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
       <h2 className="text-4xl font-bold mb-2">Coming Soon</h2>
       <p className="text-gray-600 mb-8">Still Learning New Techs</p>
 
