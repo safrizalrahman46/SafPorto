@@ -21,7 +21,9 @@ export default function Contact() {
   const subjekEncoded = encodeURIComponent(subjekEmail);
 
   // 3. Link WhatsApp (Sudah Benar)
-  const linkWhatsApp = `https://wa.me/${nomorWA}?text=${pesanEncoded}`;
+  // const linkWhatsApp = `https://wa.me/${nomorWA}?text=${pesanEncoded}`;
+  const linkWhatsApp = `https://api.whatsapp.com/send?phone=6282213286139&text=${pesanEncoded}`;
+
   
   // 4. (PERUBAHAN UTAMA) Link Email diubah agar langsung ke GMAIL
   const linkEmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailAnda}&su=${subjekEncoded}&body=${pesanEncoded}`;

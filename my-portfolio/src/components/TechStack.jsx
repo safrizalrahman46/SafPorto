@@ -10,6 +10,14 @@ export default function TechStack() {
     { name: 'Javascript', src: '/tech/javascript.png' },
     { name: 'Javascript', src: '/tech/colab.png' },
     { name: 'Javascript', src: '/tech/python.png' },
+
+    //Online
+    { name: 'PHP', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
+    { name: 'MySQL', src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+    { name: 'SQL Server', src: 'https://upload.wikimedia.org/wikipedia/de/8/8c/Microsoft_SQL_Server_Logo.svg' },
+     { name: 'Canva', src: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg' },
+    { name: 'Adobe Premiere Pro', src: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg' },
+    { name: 'DaVinci Resolve', src: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/DaVinci_Resolve_17_logo.svg' },
   ];
 
   // Duplikasi array tetap diperlukan
