@@ -75,9 +75,10 @@ export default function Certification() {
     <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
       {/* Header dengan animasi fade in dari atas */}
       <div className="text-center mb-12 animate-fadeInDown">
-        <h2 className="text-5xl font-extrabold mb-3 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 bg-clip-text text-transparent animate-gradient">
-          Certifications
-        </h2>
+  <h2 className="text-5xl font-extrabold mb-3 text-black">
+  Certifications
+</h2>
+
         <p className="text-gray-500 text-lg animate-pulse">My Professional Achievements</p>
       </div>
       

@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Preloader from './components/Preloader';
 import Certification from './components/Certification';
 
+// Ikon-ikon ini diimpor di sini
 import { Mail, Linkedin, Instagram, MessageSquare, Dribbble, Github } from 'lucide-react';
 
 function App() {
@@ -17,22 +18,34 @@ function App() {
   const [isFading, setIsFading] = useState(false);
 
   useEffect(() => {
-    // PERUBAHAN TIMER:
-    // Setelah 2 detik, mulai proses fade-out
+    // --- PERBAIKAN UNTUK SCROLL RESTORATION ---
+    // 1. Memberi tahu browser untuk tidak menyimpan posisi scroll
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    // ------------------------------------------
+
+    // Timer fade-out Anda (tidak diubah)
     const fadeTimer = setTimeout(() => {
       setIsFading(true);
     }, 2000); // 2 detik
 
-    // Setelah 3 detik (2s loading + 1s fade), hilangkan preloader
+    // Timer untuk menghilangkan preloader (tidak diubah)
     const loadTimer = setTimeout(() => {
       setIsLoading(false);
+
+      // --- PERBAIKAN UNTUK SCROLL RESTORATION ---
+      // 2. Memaksa halaman untuk scroll ke paling atas
+      window.scrollTo(0, 0);
+      // ------------------------------------------
+
     }, 3000); // 3 detik
 
     return () => {
       clearTimeout(fadeTimer);
       clearTimeout(loadTimer);
     };
-  }, []);
+  }, []); // <-- Array kosong ini memastikan useEffect hanya berjalan sekali saat reload
 
   return (
     <div className="min-h-screen bg-white">
@@ -51,7 +64,7 @@ function App() {
       <Certification />
       <Footer />
       
-      {/* Sidebar Sosial Media */}
+      {/* Sidebar Sosial Media (tidak diubah) */}
       <div className="fixed right-6 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-40 hidden md:flex">
         <a 
           href="#" 
