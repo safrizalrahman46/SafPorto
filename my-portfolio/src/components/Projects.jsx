@@ -1,9 +1,28 @@
 import React from "react";
-// 1. TAMBAHKAN IMPORT UNTUK IKON
 import { Github, Figma } from "lucide-react";
+// 1. Impor motion
+import { motion } from "framer-motion";
+
+// 2. Definisikan varian animasi untuk kartu
+// Ini akan membuat kartu muncul 'dari kecil ke besar' (scale)
+const cardVariants = {
+  hidden: { 
+    opacity: 0, 
+    scale: 0.9 // Mulai dari 90% ukuran
+  },
+  visible: { 
+    opacity: 1, 
+    scale: 1, // Selesai di 100% ukuran
+    transition: { 
+      duration: 0.5, 
+      ease: "easeOut" 
+    } 
+  }
+};
+
 
 export default function Projects() {
-  // 2. TAMBAHKAN LINK PADA DATA PROJECTS
+  // Data proyek Anda (TIDAK DIUBAH)
   const projects = [
     {
       title: "Dashboard Admin",
@@ -11,8 +30,8 @@ export default function Projects() {
       tags: ["React", "TailwindCSS", "Vite"],
       color: "bg-white-300",
       src: "/images/dashboard.png",
-      githubUrl: "https://github.com/username/project-link", // Ganti dengan link Anda
-      figmaUrl: null, // Kosongkan jika tidak ada
+      githubUrl: "https://github.com/username/project-link", 
+      figmaUrl: null, 
     },
     {
       title: "POS Tab",
@@ -21,7 +40,7 @@ export default function Projects() {
       color: "bg-white-300",
       src: "/images/PosTab.png",
       githubUrl: "https://github.com/username/project-link",
-      figmaUrl: "https://figma.com/link-anda", // Ganti dengan link Anda
+      figmaUrl: "https://figma.com/link-anda", 
     },
     {
       title: "Product Page",
@@ -78,7 +97,7 @@ export default function Projects() {
       figmaUrl: null,
     },
     {
-      title: "Product Page", // Anda memiliki duplikat, mungkin ganti namanya?
+      title: "Product Page", 
       category: "Aplikasi untuk mencatat dan memantau pengeluaran harian",
       tags: ["Flutter", "Firebase", "Bloc"],
       color: "bg-white-300",
@@ -125,11 +144,20 @@ export default function Projects() {
       {/* Grid Projects */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <div
+          
+          // 3. Bungkus setiap kartu dengan motion.div
+          <motion.div
             key={index}
-            className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" // Tambahkan flex flex-col
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ 
+              once: true,    // Animasi hanya sekali
+              amount: 0.1    // Memicu saat 10% kartu terlihat
+            }}
+            className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full" // Menambahkan h-full
           >
-            {/* Gambar */}
+            {/* Gambar (TIDAK DIUBAH) */}
             <div
               className={`${project.color} h-56 flex items-center justify-center`}
             >
@@ -140,12 +168,12 @@ export default function Projects() {
               />
             </div>
 
-            {/* Konten */}
-            <div className="p-6 flex flex-col flex-grow"> {/* Tambahkan flex-grow */}
+            {/* Konten (TIDAK DIUBAH) */}
+            <div className="p-6 flex flex-col flex-grow">
               <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
               <p className="text-sm text-gray-600 mb-4">{project.category}</p>
 
-              {/* Tags */}
+              {/* Tags (TIDAK DIUBAH) */}
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, i) => (
                   <span
@@ -157,9 +185,8 @@ export default function Projects() {
                 ))}
               </div>
 
-              {/* 3. TAMBAHKAN BLOK LINK DI SINI */}
+              {/* Link GitHub & Figma (TIDAK DIUBAH) */}
               <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-100">
-                {/* Link GitHub (hanya muncul jika ada URL) */}
                 {project.githubUrl && (
                   <a
                     href={project.githubUrl}
@@ -171,8 +198,6 @@ export default function Projects() {
                     GitHub
                   </a>
                 )}
-
-                {/* Link Figma (hanya muncul jika ada URL) */}
                 {project.figmaUrl && (
                   <a
                     href={project.figmaUrl}
@@ -186,7 +211,7 @@ export default function Projects() {
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

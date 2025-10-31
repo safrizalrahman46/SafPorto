@@ -1,6 +1,25 @@
 import React from 'react';
+// 1. Impor motion
+import { motion } from 'framer-motion';
+
+// 2. Definisikan varian (kita bisa pakai nama yang sama)
+const cardVariants = {
+  hidden: { 
+    opacity: 0, 
+    scale: 0.9 
+  },
+  visible: { 
+    opacity: 1, 
+    scale: 1, 
+    transition: { 
+      duration: 0.5, 
+      ease: "easeOut" 
+    } 
+  }
+};
 
 export default function Certification() {
+  // Data sertifikat Anda (TIDAK DIUBAH)
   const certificates = [
     {
       id: 1,
@@ -8,8 +27,7 @@ export default function Certification() {
       issuer: "UBIG Internship",
       date: "2022",
       image: "Certification/UBIG.jpg",
-      // --- UBAH DI SINI: Gradien monokrom ---
-      color: "from-gray-300 to-gray-500", // Monokrom gradient untuk overlay
+      color: "from-gray-300 to-gray-500", 
       url: "https://drive.google.com/file/d/11IALKSmdm22WOLSKpwJjKNRzrYXbYG-X/view?usp=sharing"
     },
     {
@@ -18,8 +36,7 @@ export default function Certification() {
       issuer: "BNSP",
       date: "2025",
       image: "Certification/BNSP1.jpg",
-      // --- UBAH DI SINI: Gradien monokrom ---
-      color: "from-gray-400 to-gray-600", // Monokrom gradient untuk overlay
+      color: "from-gray-400 to-gray-600",
       url: "https://drive.google.com/file/d/1HLg8eiFuW7qtcY8zJEN1gZSJQFTJyu5A/view?usp=sharing"
     },
     {
@@ -28,15 +45,14 @@ export default function Certification() {
       issuer: "BNSP",
       date: "2023",
       image: "Certification/BNSP2.jpg",
-      // --- UBAH DI SINI: Gradien monokrom ---
-      color: "from-gray-500 to-gray-700", // Monokrom gradient untuk overlay
+      color: "from-gray-500 to-gray-700",
       url: "https://drive.google.com/file/d/1xrSIxpnxfOM3S_Gg_N8f6DT-v7vkUL_Y/view?usp=sharing"
     }
   ];
 
   return (
     <section id="certification" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
-      {/* Header */}
+      {/* Header (TIDAK DIUBAH) */}
       <div className="text-center mb-12 animate-fadeInDown">
         <h2 className="text-5xl font-extrabold mb-3 text-black">
           Certifications
@@ -44,52 +60,48 @@ export default function Certification() {
         <p className="text-gray-500 text-lg animate-pulse">My Professional Achievements</p>
       </div>
       
-      {/* Container Grid */}
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         
         {certificates.map((certificate, index) => (
-          <div 
+          // 3. Bungkus setiap kartu dengan motion.div
+          <motion.div 
             key={certificate.id}
-            // --- UBAH DI SINI: Shadow hover kartu ---
-            className="relative bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl p-8 border-2 border-gray-100 transition-all duration-500 hover:shadow-gray-300 hover:-translate-y-2 animate-fadeInDown"
-            style={{ animationDelay: `${index * 150}ms` }} 
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ 
+              once: true,
+              amount: 0.1 
+            }}
+            // Hapus 'animate-fadeInDown' agar tidak bentrok dengan framer-motion
+            className="relative bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl p-8 border-2 border-gray-100 transition-all duration-500 hover:shadow-gray-300 hover:-translate-y-2 h-full" // Menambahkan h-full
+            // 'style' untuk animationDelay tidak diperlukan lagi
           >
             
-            {/* Container gambar */}
-            <div 
-              // --- UBAH DI SINI: Gradien latar belakang gambar menjadi monokrom ---
-              className="relative bg-gradient-to-br from-gray-400 to-gray-600 h-64 rounded-2xl overflow-hidden mb-6 group"
-            >
+            {/* Konten Kartu (TIDAK DIUBAH) */}
+            
+            <div className="relative bg-gradient-to-br from-gray-400 to-gray-600 h-64 rounded-2xl overflow-hidden mb-6 group">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-all duration-1000 ease-out"></div>
-              
               <img 
                 src={certificate.image}
                 alt={certificate.title}
                 className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
               />
-              
-              {/* --- UBAH DI SINI: Warna badge Certified --- */}
               <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-gray-700 shadow-lg animate-bounce">
                 ✨ Certified
               </div>
-              
-              {/* Overlay gradien gambar akan diambil dari certificate.color yang sudah diubah */}
               <div className={`absolute inset-0 bg-gradient-to-t ${certificate.color} opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
             </div>
             
-            {/* Info sertifikat */}
             <div className="text-center mb-6 space-y-2">
               <h3 className="text-2xl font-bold text-gray-800 transform transition-all duration-300 hover:scale-105">
                 {certificate.title}
               </h3>
               <div className="flex items-center justify-center gap-2">
-                {/* --- UBAH DI SINI: Garis pemisah menjadi monokrom --- */}
                 <div className="w-8 h-0.5 bg-gradient-to-r from-transparent via-gray-600 to-transparent animate-pulse"></div>
-                {/* --- UBAH DI SINI: Teks issuer menjadi monokrom --- */}
                 <p className="text-gray-700 font-semibold">
                   {certificate.issuer}
                 </p>
-                {/* --- UBAH DI SINI: Garis pemisah menjadi monokrom --- */}
                 <div className="w-8 h-0.5 bg-gradient-to-r from-transparent via-gray-600 to-transparent animate-pulse"></div>
               </div>
               <p className="text-gray-500 text-sm flex items-center justify-center gap-2">
@@ -100,7 +112,6 @@ export default function Certification() {
               </p>
             </div>
             
-            {/* Tombol Lihat Sertifikat (sudah hitam dari perubahan sebelumnya) */}
             <div className="text-center mt-6">
               <a
                 href={certificate.url}
@@ -115,11 +126,11 @@ export default function Certification() {
               </a>
             </div>
 
-          </div>
+          </motion.div>
         ))}
       </div>
 
-      {/* CSS Animations */}
+      {/* CSS Animations (TIDAK DIUBAH) */}
       <style jsx>{`
         @keyframes fadeInDown {
           from {
@@ -131,7 +142,6 @@ export default function Certification() {
             transform: translateY(0);
           }
         }
-
         .animate-fadeInDown {
           animation: fadeInDown 0.8s ease-out;
           animation-fill-mode: backwards; 

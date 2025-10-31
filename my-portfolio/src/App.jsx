@@ -9,62 +9,113 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Preloader from './components/Preloader';
 import Certification from './components/Certification';
-
-// Ikon-ikon ini diimpor di sini
 import { Mail, Linkedin, Instagram, MessageSquare, Dribbble, Github } from 'lucide-react';
+
+// 1. Impor motion
+import { motion } from 'framer-motion';
+
+// 2. Definisikan varian animasi untuk SELURUH SECTION
+// Ini akan membuat section muncul dengan 'fade-up' (naik)
+const sectionVariants = {
+  hidden: { 
+    opacity: 0, 
+    y: 20 // Mulai 20px di bawah
+  },
+  visible: { 
+    opacity: 1, 
+    y: 0, // Selesai di posisi 0
+    transition: { 
+      duration: 0.6, 
+      ease: "easeOut" 
+    } 
+  }
+};
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isFading, setIsFading] = useState(false);
 
+  // Fungsi Preloader Anda (TIDAK DIUBAH)
   useEffect(() => {
-    // --- PERBAIKAN UNTUK SCROLL RESTORATION ---
-    // 1. Memberi tahu browser untuk tidak menyimpan posisi scroll
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
-    // ------------------------------------------
-
-    // Timer fade-out Anda (tidak diubah)
     const fadeTimer = setTimeout(() => {
       setIsFading(true);
-    }, 2000); // 2 detik
-
-    // Timer untuk menghilangkan preloader (tidak diubah)
+    }, 2000); 
     const loadTimer = setTimeout(() => {
       setIsLoading(false);
-
-      // --- PERBAIKAN UNTUK SCROLL RESTORATION ---
-      // 2. Memaksa halaman untuk scroll ke paling atas
       window.scrollTo(0, 0);
-      // ------------------------------------------
-
-    }, 3000); // 3 detik
+    }, 3000); 
 
     return () => {
       clearTimeout(fadeTimer);
       clearTimeout(loadTimer);
     };
-  }, []); // <-- Array kosong ini memastikan useEffect hanya berjalan sekali saat reload
+  }, []); 
 
   return (
     <div className="min-h-screen bg-white">
       
-      {/* Preloader Anda */}
       {isLoading && <Preloader isFading={isFading} />}
 
-      {/* Sisa Aplikasi Anda (tidak diubah) */}
+      {/* Navbar dan Hero tidak dianimasi */}
       <Navbar />
       <Hero />
-      <About />
-      <Projects />
-      <TechStack />
-      <ComingSoon />
-      <Contact />
-      <Certification />
-      <Footer />
+
+      {/* 3. Bungkus semua section di bawah Hero dengan motion.div */}
       
-      {/* Sidebar Sosial Media (tidak diubah) */}
+      <motion.div
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <About />
+      </motion.div>
+
+      {/* Projects dan Certification tidak perlu dibungkus di sini
+          karena animasinya sudah ada DI DALAM komponennya */}
+      <Projects />
+      <Certification />
+
+      <motion.div
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <TechStack />
+      </motion.div>
+
+      <motion.div
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <ComingSoon />
+      </motion.div>
+
+      <motion.div
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <Contact />
+      </motion.div>
+
+      <motion.div
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <Footer />
+      </motion.div>
+      
+      {/* Sidebar Sosial Media (TIDAK DIUBAH) */}
       <div className="fixed right-6 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-40 hidden md:flex">
         <a 
           href="#" 
