@@ -30,7 +30,7 @@ export default function Preloader({ isFading }) {
       </div>
 
       {/* Optional: Tambahkan teks */}
-      <p className="text-sm text-gray-600 mt-4 tracking-wide">is it too late now to say sorry...</p>
+      <p className="text-sm text-gray-600 mt-4 tracking-wide">Sorry About The Loading, is it too late now to say sorry...</p>
     </div>
   );
 }
