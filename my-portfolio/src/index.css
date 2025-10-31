@@ -18,7 +18,7 @@
 }
 
 .animate-scroll-left {
-  animation: scrollLeft 200s linear infinite;
+  animation: scrollLeft 80s linear infinite;
 }
 
 .animate-scroll-left:hover {
