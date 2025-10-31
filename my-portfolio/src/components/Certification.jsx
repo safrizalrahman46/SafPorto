@@ -6,7 +6,7 @@ export default function Certification() {
       id: 1,
       title: "UBIG",
       issuer: "UBIG Internship",
-      date: "2023",
+      date: "2022",
       image: "Certification/UBIG.jpg",
       // --- UBAH DI SINI: Gradien monokrom ---
       color: "from-gray-300 to-gray-500", // Monokrom gradient untuk overlay
@@ -16,7 +16,7 @@ export default function Certification() {
       id: 2,
       title: "BNSP - Associate Data Scientist",
       issuer: "BNSP",
-      date: "2023",
+      date: "2025",
       image: "Certification/BNSP1.jpg",
       // --- UBAH DI SINI: Gradien monokrom ---
       color: "from-gray-400 to-gray-600", // Monokrom gradient untuk overlay

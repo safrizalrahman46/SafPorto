@@ -1,6 +1,9 @@
 import React from "react";
+// 1. TAMBAHKAN IMPORT UNTUK IKON
+import { Github, Figma } from "lucide-react";
 
 export default function Projects() {
+  // 2. TAMBAHKAN LINK PADA DATA PROJECTS
   const projects = [
     {
       title: "Dashboard Admin",
@@ -8,6 +11,8 @@ export default function Projects() {
       tags: ["React", "TailwindCSS", "Vite"],
       color: "bg-white-300",
       src: "/images/dashboard.png",
+      githubUrl: "https://github.com/username/project-link", // Ganti dengan link Anda
+      figmaUrl: null, // Kosongkan jika tidak ada
     },
     {
       title: "POS Tab",
@@ -15,6 +20,8 @@ export default function Projects() {
       tags: ["Next.js", "Framer Motion", "TypeScript"],
       color: "bg-white-300",
       src: "/images/PosTab.png",
+      githubUrl: "https://github.com/username/project-link",
+      figmaUrl: "https://figma.com/link-anda", // Ganti dengan link Anda
     },
     {
       title: "Product Page",
@@ -22,6 +29,8 @@ export default function Projects() {
       tags: ["Flutter", "Firebase", "Bloc"],
       color: "bg-white-300",
       src: "/images/LandingProduct.png",
+      githubUrl: null,
+      figmaUrl: "https://figma.com/link-anda",
     },
     {
       title: "LootKita",
@@ -29,6 +38,8 @@ export default function Projects() {
       tags: ["React", "TailwindCSS", "Vite"],
       color: "bg-white-300",
       src: "/images/LootkitaProjects.png",
+      githubUrl: "https://github.com/username/project-link",
+      figmaUrl: null,
     },
     {
       title: "Mintra",
@@ -36,6 +47,8 @@ export default function Projects() {
       tags: ["Next.js", "Framer Motion", "TypeScript"],
       color: "bg-white-300",
       src: "/images/Mintra.png",
+      githubUrl: "https://github.com/username/project-link",
+      figmaUrl: "https://figma.com/link-anda",
     },
     {
       title: "PBL Toeic Registration",
@@ -43,6 +56,8 @@ export default function Projects() {
       tags: ["Flutter", "Firebase", "Bloc"],
       color: "bg-white-300",
       src: "/images/PBLToeic.png",
+      githubUrl: "https://github.com/username/project-link",
+      figmaUrl: null,
     },
     {
       title: "ZonaPrivat",
@@ -50,6 +65,8 @@ export default function Projects() {
       tags: ["React", "TailwindCSS", "Vite"],
       color: "bg-white-300",
       src: "/images/ZonaPrivat.png",
+      githubUrl: "https://github.com/username/project-link",
+      figmaUrl: "https://figma.com/link-anda",
     },
     {
       title: "TicaTacToe Game",
@@ -57,13 +74,17 @@ export default function Projects() {
       tags: ["Next.js", "Framer Motion", "TypeScript"],
       color: "bg-white-300",
       src: "/images/TicTacToe.png",
+      githubUrl: "https://github.com/username/project-link",
+      figmaUrl: null,
     },
     {
-      title: "Product Page",
+      title: "Product Page", // Anda memiliki duplikat, mungkin ganti namanya?
       category: "Aplikasi untuk mencatat dan memantau pengeluaran harian",
       tags: ["Flutter", "Firebase", "Bloc"],
       color: "bg-white-300",
       src: "/images/DinoJump.png",
+      githubUrl: "https://github.com/username/project-link",
+      figmaUrl: null,
     },
     {
       title: "UMM Design Admin Page",
@@ -71,20 +92,26 @@ export default function Projects() {
       tags: ["Flutter", "Firebase", "Bloc"],
       color: "bg-white-300",
       src: "/images/UMMDesign.png",
+      githubUrl: null,
+      figmaUrl: "https://figma.com/link-anda",
     },
-     {
+    {
       title: "Hand Recognition With Python",
       category: "Aplikasi untuk mencatat dan memantau pengeluaran harian",
       tags: ["Flutter", "Firebase", "Bloc"],
       color: "bg-white-300",
       src: "/images/HandRecognition.png",
+      githubUrl: "https://github.com/username/project-link",
+      figmaUrl: null,
     },
-     {
+    {
       title: "JTI Lapor",
       category: "Aplikasi untuk mencatat dan memantau pengeluaran harian",
       tags: ["Flutter", "Firebase", "Bloc"],
       color: "bg-white-300",
       src: "/images/JTILapor.png",
+      githubUrl: "https://github.com/username/project-link",
+      figmaUrl: "https://figma.com/link-anda",
     },
   ];
 
@@ -100,7 +127,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col" // Tambahkan flex flex-col
           >
             {/* Gambar */}
             <div
@@ -114,7 +141,7 @@ export default function Projects() {
             </div>
 
             {/* Konten */}
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-grow"> {/* Tambahkan flex-grow */}
               <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
               <p className="text-sm text-gray-600 mb-4">{project.category}</p>
 
@@ -128,6 +155,35 @@ export default function Projects() {
                     {tag}
                   </span>
                 ))}
+              </div>
+
+              {/* 3. TAMBAHKAN BLOK LINK DI SINI */}
+              <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-100">
+                {/* Link GitHub (hanya muncul jika ada URL) */}
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs text-gray-800 bg-gray-200 border border-gray-300 px-3 py-1 rounded-full hover:bg-gray-300 transition-all duration-200"
+                  >
+                    <Github className="w-3 h-3" />
+                    GitHub
+                  </a>
+                )}
+
+                {/* Link Figma (hanya muncul jika ada URL) */}
+                {project.figmaUrl && (
+                  <a
+                    href={project.figmaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs text-blue-800 bg-blue-100 border border-blue-200 px-3 py-1 rounded-full hover:bg-blue-200 transition-all duration-200"
+                  >
+                    <Figma className="w-3 h-3" />
+                    Figma
+                  </a>
+                )}
               </div>
             </div>
           </div>

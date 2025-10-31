@@ -227,7 +227,7 @@ export default function Hero() {
                 My Music Taste
               </span>
               <a
-                href="https://open.spotify.com/playlist/yourplaylistid"
+                href="https://open.spotify.com/playlist/3Fus4mhU7LegyyndzsF0Mt?si=fdGX9KQoRhCAakFvHABe_Q&pi=nmTTJkZoQDm_8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 hover:bg-green-50 rounded-full transition"
