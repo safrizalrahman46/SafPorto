@@ -118,25 +118,25 @@ function App() {
       {/* Sidebar Sosial Media (TIDAK DIUBAH) */}
       <div className="fixed right-6 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-40 hidden md:flex">
         <a 
-          href="#" 
+          href="https://dribbble.com/safrizal-rahman" 
           className="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-purple-100 hover:scale-110 transition shadow-lg"
         >
           <Dribbble className="w-5 h-5" />
         </a>
         <a 
-          href="#" 
+          href="https://github.com/safrizalrahman46" 
           className="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-purple-100 hover:scale-110 transition shadow-lg"
         >
           <Github className="w-5 h-5" />
         </a>
         <a 
-          href="#" 
+          href="https://www.instagram.com/szlz__?igsh=MWplMGkzMTN5cmdwMA%3D%3D&utm_source=qr" 
           className="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-purple-100 hover:scale-110 transition shadow-lg"
         >
           <Instagram className="w-5 h-5" />
         </a>
         <a 
-          href="#" 
+          href="https://www.linkedin.com/in/safrizalrahman/" 
           className="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-purple-100 hover:scale-110 transition shadow-lg"
         >
           <Linkedin className="w-5 h-5" />
